@@ -5,12 +5,13 @@ function all(req, res, next) {
     authorProcedures.all()
 
         .then((authors) => {
-            
+
             res.json(authors);
         });
 }
 
 function make(req, res, next) {
+    
     let author = {
 
         firstname: req.body.firstname,
@@ -28,6 +29,7 @@ function make(req, res, next) {
 }
 
 function read(req, res, next) {
+
     let id = +req.params.id;
 
     authorProcedures.read(id)
@@ -37,6 +39,7 @@ function read(req, res, next) {
 }
 
 function update(req, res, next) {
+
     let author = {
         id: req.body.id,
 
@@ -52,6 +55,7 @@ function update(req, res, next) {
 }
 
 function demolish(req, res, next) {
+
     authorProcedures.demolish(req.params.id)
 
         .then(() => {

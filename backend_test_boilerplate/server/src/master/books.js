@@ -1,5 +1,5 @@
 import bookProcedures from '../procedures/books';
-
+//notes
 function all(req, res, next) {
     bookProcedures.all()
         .then((books) => {
@@ -30,6 +30,7 @@ function read(req, res, next) {
 }
 
 function update(req, res, next) {
+
     let book = {
         id: req.body.id,
         name: req.body.name,
@@ -44,6 +45,7 @@ function update(req, res, next) {
 }
 
 function demolish(req, res, next) {
+    
     bookProcedures.demolish(req.params.id)
         .then(() => {
             res.sendStatus(204);

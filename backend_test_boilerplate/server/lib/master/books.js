@@ -11,12 +11,14 @@ var _books2 = _interopRequireDefault(_books);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function all(req, res, next) {
+
     _books2.default.all().then(function (books) {
         res.json(books);
     });
 }
 
 function make(req, res, next) {
+
     var book = {
         name: req.body.name,
         authorid: req.body.authorid,
@@ -29,6 +31,7 @@ function make(req, res, next) {
 }
 
 function read(req, res, next) {
+
     var id = +req.params.id;
 
     _books2.default.read(id).then(function (book) {
@@ -37,6 +40,7 @@ function read(req, res, next) {
 }
 
 function update(req, res, next) {
+
     var book = {
         id: req.body.id,
         name: req.body.name,
@@ -50,7 +54,9 @@ function update(req, res, next) {
 }
 
 function demolish(req, res, next) {
+
     _books2.default.demolish(req.params.id).then(function () {
+        
         res.sendStatus(204);
     });
 }

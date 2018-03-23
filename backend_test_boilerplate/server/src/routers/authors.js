@@ -4,11 +4,10 @@ import authormaster from '../master/authors';
 
 let router = Router();
 
-router
-    .get('/', authormaster.all)
-    .get('/:id', authormaster.make)
-    .post('/', authormaster.create)
-    .put('/', authormaster.update)
-    .delete('/:id', authormaster.demolish);
+router.get('/', authormaster.all)
+router.get('/:id', authormaster.make)
+router.post('/', authormaster.create)
+router.put('/', authormaster.update)
+router.delete('/:id', authormaster.demolish);
 
 export default router;

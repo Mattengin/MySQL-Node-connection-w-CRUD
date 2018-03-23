@@ -4,11 +4,10 @@ import bookmaster from '../master/books';
 
 let router = Router();
 
-router
-    .get('/', bookmaster.all)
-    .get('/:id', bookmaster.make)
-    .post('/', bookmaster.create)
-    .put('/', bookmaster.update)
-    .delete('/:id', bookmaster.demolish);
+router.get('/', bookmaster.all)
+router.get('/:id', bookmaster.make)
+router.post('/', bookmaster.create)
+router.put('/', bookmaster.update)
+router.delete('/:id', bookmaster.demolish);
 
 export default router;

@@ -4,8 +4,7 @@ import { Router } from 'express';
 
 let router = Router();
 
-router
-    .use('/books', bookRouter)
-    .use('/authors', authorRouter);
+router.use('/books', bookRouter)
+router.use('/authors', authorRouter);
 
 export default router;
